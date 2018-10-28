@@ -122,6 +122,9 @@
        <property name="text">
         <string>男</string>
        </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
       </widget>
      </item>
      <item>
@@ -207,6 +210,9 @@
          <property name="text">
           <string>篮球</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">insGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="0" column="1">
@@ -214,6 +220,9 @@
          <property name="text">
           <string>排球</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">insGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="1" column="0">
@@ -221,6 +230,9 @@
          <property name="text">
           <string>足球</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">insGroup</string>
+         </attribute>
         </widget>
        </item>
        <item row="1" column="1">
@@ -228,6 +240,9 @@
          <property name="text">
           <string>羽毛球</string>
          </property>
+         <attribute name="buttonGroup">
+          <string notr="true">insGroup</string>
+         </attribute>
         </widget>
        </item>
       </layout>
@@ -276,4 +291,11 @@
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
+ <buttongroups>
+  <buttongroup name="insGroup">
+   <property name="exclusive">
+    <bool>false</bool>
+   </property>
+  </buttongroup>
+ </buttongroups>
 </ui>

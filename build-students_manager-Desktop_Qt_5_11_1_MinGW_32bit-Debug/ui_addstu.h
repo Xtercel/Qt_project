@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
@@ -57,6 +58,7 @@ public:
     QPushButton *buttonOk;
     QSpacerItem *horizontalSpacer;
     QPushButton *buttonCancel;
+    QButtonGroup *insGroup;
 
     void setupUi(QDialog *addStu)
     {
@@ -137,6 +139,7 @@ public:
 
         buttonMale = new QRadioButton(addStu);
         buttonMale->setObjectName(QStringLiteral("buttonMale"));
+        buttonMale->setChecked(true);
 
         horizontalLayout_3->addWidget(buttonMale);
 
@@ -205,21 +208,28 @@ public:
         gridLayout->setSpacing(6);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         checkBasketball = new QCheckBox(addStu);
+        insGroup = new QButtonGroup(addStu);
+        insGroup->setObjectName(QStringLiteral("insGroup"));
+        insGroup->setExclusive(false);
+        insGroup->addButton(checkBasketball);
         checkBasketball->setObjectName(QStringLiteral("checkBasketball"));
 
         gridLayout->addWidget(checkBasketball, 0, 0, 1, 1);
 
         checkVolleyball = new QCheckBox(addStu);
+        insGroup->addButton(checkVolleyball);
         checkVolleyball->setObjectName(QStringLiteral("checkVolleyball"));
 
         gridLayout->addWidget(checkVolleyball, 0, 1, 1, 1);
 
         checkSoccer = new QCheckBox(addStu);
+        insGroup->addButton(checkSoccer);
         checkSoccer->setObjectName(QStringLiteral("checkSoccer"));
 
         gridLayout->addWidget(checkSoccer, 1, 0, 1, 1);
 
         checkBadminton = new QCheckBox(addStu);
+        insGroup->addButton(checkBadminton);
         checkBadminton->setObjectName(QStringLiteral("checkBadminton"));
 
         gridLayout->addWidget(checkBadminton, 1, 1, 1, 1);
